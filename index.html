@@ -212,6 +212,13 @@
     color: #fff;
     box-shadow: 0 0 20px rgba(0,212,255,0.1);
   }
+  .btn.disabled {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #444;
+    cursor: default;
+    pointer-events: none;
+  }
 
   /* ===== Card Footer ===== */
   .card-footer {
@@ -348,6 +355,7 @@
         <p>用AI写代码，从零做了一款微信小游戏并上线</p>
         <div class="card-footer">
           <span class="badge green">已上线</span>
+          <span class="btn disabled">暂未开放</span>
         </div>
       </div>
       <div class="card">
@@ -363,6 +371,7 @@
         <p>每天自动追踪全网AI热点，监控11个平台+GitHub Trending</p>
         <div class="card-footer">
           <span class="badge pulse">运行中</span>
+          <span class="btn disabled">暂未开放</span>
         </div>
       </div>
     </div>
