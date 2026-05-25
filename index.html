@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>一人变量 · 非程序员的AI实验记录</title>
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuHei&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     background: #0a0a0f;
     color: #b0b0b0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-family: "Noto Sans SC", "PingFang SC", sans-serif;
     line-height: 1.8;
     min-height: 100vh;
     overflow-x: hidden;
@@ -44,7 +45,8 @@
   .hero h1 {
     font-size: clamp(3rem, 8vw, 5rem);
     font-weight: 800;
-    letter-spacing: 2px;
+    font-family: "ZCOOL KuHei", sans-serif;
+    letter-spacing: 4px;
     background: linear-gradient(135deg, #00d4ff, #a855f7, #00d4ff, #a855f7);
     background-size: 300% 300%;
     -webkit-background-clip: text;
@@ -79,7 +81,8 @@
     font-weight: 700;
     color: #fff;
     margin-bottom: 40px;
-    letter-spacing: 0.5px;
+    letter-spacing: 2px;
+    font-family: "ZCOOL KuHei", sans-serif;
   }
   .section-title::after {
     content: "";
@@ -124,6 +127,8 @@
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 8px 32px rgba(0,0,0,0.25);
     transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
   }
   .card:hover {
     border-color: rgba(0,212,255,0.25);
@@ -135,18 +140,22 @@
     font-weight: 700;
     color: #fff;
     margin-bottom: 12px;
+    font-family: "ZCOOL KuHei", sans-serif;
+    letter-spacing: 1px;
   }
   .card p {
     font-size: 0.95rem;
     color: #888;
     margin-bottom: 18px;
     line-height: 1.7;
+    flex: 1;
   }
 
   /* ===== Badge ===== */
   .badge {
     display: inline-flex;
     align-items: center;
+    align-self: flex-start;
     gap: 6px;
     font-size: 0.78rem;
     padding: 4px 12px;
@@ -197,13 +206,22 @@
                 linear-gradient(135deg, rgba(0,212,255,0.4), rgba(168,85,247,0.4)) border-box;
     border: 1px solid transparent;
     transition: all 0.3s;
-    margin-top: 14px;
   }
   .btn:hover {
     background: linear-gradient(rgba(0,212,255,0.08), rgba(168,85,247,0.06)) padding-box,
                 linear-gradient(135deg, rgba(0,212,255,0.7), rgba(168,85,247,0.7)) border-box;
     color: #fff;
     box-shadow: 0 0 20px rgba(0,212,255,0.1);
+  }
+
+  /* ===== Card Footer ===== */
+  .card-footer {
+    margin-top: auto;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   /* ===== Social ===== */
@@ -329,18 +347,24 @@
       <div class="card">
         <h3>微信小游戏</h3>
         <p>用AI写代码，从零做了一款微信小游戏并上线</p>
-        <span class="badge green">已上线</span>
+        <div class="card-footer">
+          <span class="badge green">已上线</span>
+        </div>
       </div>
       <div class="card">
         <h3>三方AI协作系统</h3>
         <p>Claude做架构、Codex做审查、DeepSeek做执行，API成本降到30元</p>
-        <span class="badge purple">已开源</span>
-        <div><a class="btn" href="https://github.com/muxili87-art/ai-triple-collab" target="_blank" rel="noopener">查看项目</a></div>
+        <div class="card-footer">
+          <span class="badge purple">已开源</span>
+          <a class="btn" href="https://github.com/muxili87-art/ai-triple-collab" target="_blank" rel="noopener">查看项目</a>
+        </div>
       </div>
       <div class="card">
         <h3>AI信息雷达</h3>
         <p>每天自动追踪全网AI热点，监控11个平台+GitHub Trending</p>
-        <span class="badge pulse">运行中</span>
+        <div class="card-footer">
+          <span class="badge pulse">运行中</span>
+        </div>
       </div>
     </div>
   </div>
